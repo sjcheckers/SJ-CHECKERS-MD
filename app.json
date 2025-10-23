@@ -1,0 +1,37 @@
+{
+  "name": "CheckersBot",
+  "description": "CheckersBot, your friendly assistant!",
+  "logo": "https://i.imgur.com/MQLpjjQ.png",
+  "keywords": [],
+  "repository": "https://github.com/sjcheckers/SJ-CHECKERS-MD",
+  "stack": "container",
+  "addons": [
+    {
+      "plan": "heroku-postgresql"
+    }
+  ],
+  "scripts": {
+    "start": "node index.js"
+  },
+"env": {
+  "SESSION_ID": {
+    "description": "Must begin with 'CheckersBot:~' or 'lil-vixx:~'.",
+    "value": "",
+    "required": false
+  }
+},
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/DuckyTeam/heroku-buildpack-imagemagick.git"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    },
+    {
+      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
+    }
+  ]
+    }
